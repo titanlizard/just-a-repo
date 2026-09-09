@@ -1,0 +1,265 @@
+{
+  "id": "daily-activities-v1",
+  "name": "Daily Activities",
+  "version": "1.4.0",
+  "description": "Standard activity model for daily activity monitoring",
+  "ui_title": "Daily Activities",
+  "ui_subtitle": "Select your current daily activity",
+  "lastUpdated": "2026-09-04T12:00:00Z",
+  "activities": [
+    {
+      "id": 1,
+      "id_long": "activity_sleep",
+      "name": "Sleeping",
+      "category": "rest",
+      "description": "Deep sleep or night sleep, hours of continuous rest",
+      "icon": "bed",
+      "color": "#4A90E2"
+    },
+    {
+      "id": 2,
+      "id_long": "activity_napping",
+      "name": "Napping",
+      "category": "rest",
+      "description": "Short nap or power nap",
+      "icon": "moon",
+      "color": "#5DADE2"
+    },
+    {
+      "id": 3,
+      "id_long": "activity_relaxation",
+      "name": "Relaxation",
+      "category": "rest",
+      "description": "Relaxing or unwinding, rest, leisure activities",
+      "icon": "spa",
+      "color": "#9B59B6"
+    },
+    {
+      "id": 4,
+      "id_long": "activity_sitting",
+      "name": "Sitting",
+      "category": "inactive",
+      "description": "Sitting at desk, watching TV, etc.",
+      "icon": "chair",
+      "color": "#7B68EE"
+    },
+    {
+      "id": 5,
+      "id_long": "activity_standing",
+      "name": "Standing",
+      "category": "inactive",
+      "description": "Standing still or minimal movement, waiting, standing in place",
+      "icon": "person",
+      "color": "#50E3C2"
+    },
+    {
+      "id": 6,
+      "id_long": "activity_walking",
+      "name": "Walking",
+      "category": "light",
+      "description": "Walking at normal pace, indoor or outdoor walking",
+      "icon": "walk",
+      "color": "#F5A623"
+    },
+    {
+      "id": 7,
+      "id_long": "activity_stretching",
+      "name": "Stretching",
+      "category": "light",
+      "description": "Stretching or flexibility exercises, mobility work, warm-up",
+      "icon": "figure-flexibility",
+      "color": "#00CEC9"
+    },
+    {
+      "id": 8,
+      "id_long": "activity_running",
+      "name": "Running",
+      "category": "intensive",
+      "description": "Running or jogging",
+      "icon": "run",
+      "color": "#D0021B"
+    },
+    {
+      "id": 9,
+      "id_long": "activity_cycling",
+      "name": "Cycling",
+      "category": "intensive",
+      "description": "Riding a bicycle, stationary or outdoor cycling",
+      "icon": "bike",
+      "color": "#FF6B6B"
+    },
+    {
+      "id": 10,
+      "id_long": "activity_exercise",
+      "name": "Exercise",
+      "category": "intensive",
+      "description": "Workout or fitness training, gym, home workouts, weights",
+      "icon": "dumbbell",
+      "color": "#E94B3C"
+    },
+    {
+      "id": 11,
+      "id_long": "activity_swimming",
+      "name": "Swimming",
+      "category": "intensive",
+      "description": "Swimming or water sports",
+      "icon": "water",
+      "color": "#0984E3"
+    },
+    {
+      "id": 12,
+      "id_long": "activity_sports",
+      "name": "Sports",
+      "category": "intensive",
+      "description": "Playing sports or competitive activities, team sports, games",
+      "icon": "volleyball",
+      "color": "#FF7675"
+    },
+    {
+      "id": 13,
+      "id_long": "activity_eating",
+      "name": "Eating",
+      "category": "daily",
+      "description": "Having a meal or snack",
+      "icon": "utensils",
+      "color": "#FFD700"
+    },
+    {
+      "id": 14,
+      "id_long": "activity_working",
+      "name": "Working",
+      "category": "daily",
+      "description": "Office work or focused tasks",
+      "icon": "briefcase",
+      "color": "#4ECDC4"
+    },
+    {
+      "id": 15,
+      "id_long": "activity_reading",
+      "name": "Reading",
+      "category": "daily",
+      "description": "Reading or studying, books, articles, learning",
+      "icon": "book",
+      "color": "#6C5CE7"
+    },
+    {
+      "id": 16,
+      "id_long": "activity_shopping",
+      "name": "Shopping",
+      "category": "daily",
+      "description": "Shopping or errands",
+      "icon": "shopping-cart",
+      "color": "#FF9FF3"
+    },
+    {
+      "id": 17,
+      "id_long": "activity_chores",
+      "name": "Housework",
+      "category": "daily",
+      "description": "Cleaning or household tasks, tidying, organizing",
+      "icon": "broom",
+      "color": "#FDCB6E"
+    },
+    {
+      "id": 18,
+      "id_long": "activity_stressed",
+      "name": "Stressed",
+      "category": "mental",
+      "description": "Feeling stressed, anxious, or frustrated",
+      "icon": "alert",
+      "color": "#E74C3C"
+    },
+    {
+      "id": 19,
+      "id_long": "activity_focused",
+      "name": "Focused",
+      "category": "mental",
+      "description": "Deep focus, concentration, or meditation",
+      "icon": "target",
+      "color": "#3498DB"
+    },
+    {
+      "id": 20,
+      "id_long": "activity_happy",
+      "name": "Happy",
+      "category": "mental",
+      "description": "Happy, content, calm, or peaceful state",
+      "icon": "smile",
+      "color": "#2ECC71"
+    },
+    {
+      "id": 21,
+      "id_long": "activity_energized",
+      "name": "Energized",
+      "category": "mental",
+      "description": "Energized or motivated, excited, high energy",
+      "icon": "zap",
+      "color": "#F1C40F"
+    },
+    {
+      "id": 22,
+      "id_long": "activity_tired",
+      "name": "Tired",
+      "category": "mental",
+      "description": "Tired, exhausted, or fatigued",
+      "icon": "moon",
+      "color": "#34495E"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "id_long": "rest",
+      "name": "Rest",
+      "heartRateRange": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": 2,
+      "id_long": "inactive",
+      "name": "Inactive",
+      "heartRateRange": [
+        60,
+        90
+      ]
+    },
+    {
+      "id": 3,
+      "id_long": "light",
+      "name": "Light Activity",
+      "heartRateRange": [
+        90,
+        120
+      ]
+    },
+    {
+      "id": 4,
+      "id_long": "intensive",
+      "name": "Intensive",
+      "heartRateRange": [
+        120,
+        170
+      ]
+    },
+    {
+      "id": 5,
+      "id_long": "daily",
+      "name": "Daily Tasks",
+      "heartRateRange": [
+        70,
+        110
+      ]
+    },
+    {
+      "id": 6,
+      "id_long": "mental",
+      "name": "Mental State",
+      "heartRateRange": [
+        60,
+        100
+      ]
+    }
+  ]
+}
