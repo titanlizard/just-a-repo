@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Annotation Model Schema",
+  "description": "Schema for the annotation model used in WearApp",
+  "type": "object",
+  "required": ["id", "name", "version", "annotations", "categories"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the model",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the annotation model"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the model",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Long description of the model"
+    },
+    "ui_title": {
+      "type": "string",
+      "description": "Title displayed in UI"
+    },
+    "ui_subtitle": {
+      "type": "string",
+      "description": "Subtitle displayed in UI"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "annotations": {
+      "type": "array",
+      "description": "List of annotation definitions",
+      "items": {
+        "$ref": "#/definitions/AnnotationDefinition"
+      },
+      "minItems": 1
+    },
+    "categories": {
+      "type": "array",
+      "description": "List of annotation categories",
+      "items": {
+        "$ref": "#/definitions/AnnotationCategory"
+      },
+      "minItems": 1
+    },
+    "fromRemote": {
+      "type": "boolean",
+      "description": "Whether this model came from remote source",
+      "default": false
+    }
+  },
+  "definitions": {
+    "AnnotationDefinition": {
+      "type": "object",
+      "required": ["id", "id_long", "name", "category"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Numeric identifier for the annotation",
+          "minimum": 1
+        },
+        "id_long": {
+          "type": "string",
+          "description": "String identifier for the annotation",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the annotation"
+        },
+        "category": {
+          "type": "string",
+          "description": "Category ID the annotation belongs to"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the annotation"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Icon name or identifier"
+        },
+        "color": {
+          "type": "string",
+          "description": "Hex color code",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "measurement_type": {
+          "type": "string",
+          "description": "Type of measurement (e.g., blood_pressure, heart_rate)",
+          "enum": ["blood_pressure", "heart_rate", "blood_sugar", "weight", null]
+        },
+        "supports_value_entry": {
+          "type": "boolean",
+          "description": "Whether this annotation supports value input",
+          "default": false
+        },
+        "value_type": {
+          "type": "string",
+          "description": "Data type of the value(s)",
+          "examples": ["number", "text", "number/number", "number-number"],
+          "pattern": "^[a-z0-9/-]*$"
+        },
+        "value_placeholder": {
+          "type": "string",
+          "description": "Placeholder text for value input field"
+        },
+        "value_labels": {
+          "oneOf": [
+            {
+              "type": "array",
+              "description": "Labels for single or multiple value inputs",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "maxItems": 3
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "value_unit": {
+          "type": "string",
+          "description": "Unit of measurement (e.g., kg, bpm, mmHg)"
+        },
+        "duration": {
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "Duration value"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "duration_unit": {
+          "type": "string",
+          "description": "Unit of duration (e.g., minutes, hours)",
+          "examples": ["minutes", "hours", "seconds"]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "supports_value_entry": {
+                "const": true
+              }
+            },
+            "required": ["supports_value_entry"]
+          },
+          "then": {
+            "required": ["value_type", "value_labels"]
+          }
+        }
+      ]
+    },
+    "AnnotationCategory": {
+      "type": "object",
+      "required": ["id", "id_long", "name"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Numeric identifier for the category",
+          "minimum": 1
+        },
+        "id_long": {
+          "type": "string",
+          "description": "String identifier for the category",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the category"
+        }
+      }
+    }
+  }
+}
