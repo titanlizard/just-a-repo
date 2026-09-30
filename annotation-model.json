@@ -1,7 +1,7 @@
 {
   "id": "daily-activities-v1",
   "name": "Annotation Model",
-  "version": "1.4.0",
+  "version": "1.1.0",
   "description": "Standard annotation model for daily activity monitoring",
   "ui_title": "Daily Activities",
   "ui_subtitle": "Select your current daily activity",
@@ -15,8 +15,12 @@
       "description": "Deep sleep or night sleep, hours of continuous rest",
       "icon": "sleep",
       "color": "#4A90E2",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 8",
+      "value_unit": "hours"
+
     },
     {
       "id": 2,
@@ -26,8 +30,11 @@
       "description": "Short nap or power nap",
       "icon": "napping",
       "color": "#5DADE2",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 30",
+      "value_unit": "minutes"
     },
     {
       "id": 3,
@@ -37,8 +44,11 @@
       "description": "Relaxing or unwinding, rest, leisure activities",
       "icon": "spa",
       "color": "#9B59B6",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 15",
+      "value_unit": "minutes"
     },
     {
       "id": 4,
@@ -48,8 +58,7 @@
       "description": "Sitting at desk, watching TV, etc.",
       "icon": "sitting",
       "color": "#7B68EE",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 5,
@@ -59,8 +68,7 @@
       "description": "Standing still or minimal movement, waiting, standing in place",
       "icon": "standing",
       "color": "#50E3C2",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 6,
@@ -70,8 +78,11 @@
       "description": "Walking at normal pace, indoor or outdoor walking",
       "icon": "walk",
       "color": "#F5A623",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 30",
+      "value_unit": "minutes"
     },
     {
       "id": 7,
@@ -81,8 +92,11 @@
       "description": "Stretching or flexibility exercises, mobility work, warm-up",
       "icon": "stretching",
       "color": "#00CEC9",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 15",
+      "value_unit": "minutes"
     },
     {
       "id": 8,
@@ -92,8 +106,11 @@
       "description": "Running or jogging",
       "icon": "run",
       "color": "#D0021B",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 15",
+      "value_unit": "minutes"
     },
     {
       "id": 9,
@@ -103,8 +120,11 @@
       "description": "Riding a bicycle, stationary or outdoor cycling",
       "icon": "bike",
       "color": "#FF6B6B",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 30",
+      "value_unit": "minutes"
     },
     {
       "id": 10,
@@ -114,8 +134,11 @@
       "description": "Workout or fitness training, gym, home workouts, weights",
       "icon": "dumbbell",
       "color": "#E94B3C",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 30",
+      "value_unit": "minutes"
     },
     {
       "id": 11,
@@ -125,8 +148,11 @@
       "description": "Swimming or water sports",
       "icon": "swimming",
       "color": "#0984E3",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 30",
+      "value_unit": "minutes"
     },
     {
       "id": 12,
@@ -136,8 +162,11 @@
       "description": "Playing sports or competitive activities, team sports, games",
       "icon": "volleyball",
       "color": "#FF7675",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": true,
+      "value_type": "number",
+      "value_labels": ["Duration"],
+      "value_placeholder": "e.g. 30",
+      "value_unit": "minutes"
     },
     {
       "id": 13,
@@ -147,8 +176,7 @@
       "description": "Having a meal or snack",
       "icon": "utensils",
       "color": "#FFD700",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 14,
@@ -158,8 +186,7 @@
       "description": "Office work or focused tasks",
       "icon": "briefcase",
       "color": "#4ECDC4",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 15,
@@ -169,8 +196,7 @@
       "description": "Reading or studying, books, articles, learning",
       "icon": "book",
       "color": "#6C5CE7",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 16,
@@ -180,19 +206,17 @@
       "description": "Shopping or errands",
       "icon": "shopping-cart",
       "color": "#FF9FF3",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 17,
-      "id_long": "activity_chores",
+      "id_long": "activity_housework",
       "name": "Housework",
       "category": "daily",
       "description": "Cleaning or household tasks, tidying, organizing",
       "icon": "broom",
       "color": "#FDCB6E",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 18,
@@ -202,8 +226,7 @@
       "description": "Feeling stressed, anxious, or frustrated",
       "icon": "alert",
       "color": "#E74C3C",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 19,
@@ -213,8 +236,7 @@
       "description": "Deep focus, concentration, or meditation",
       "icon": "target",
       "color": "#3498DB",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 20,
@@ -224,8 +246,7 @@
       "description": "Happy, content, calm, or peaceful state",
       "icon": "smile",
       "color": "#2ECC71",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 21,
@@ -235,8 +256,7 @@
       "description": "Energized or motivated, excited, high energy",
       "icon": "zap",
       "color": "#F1C40F",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 22,
@@ -246,8 +266,7 @@
       "description": "Tired, exhausted, or fatigued",
       "icon": "moon",
       "color": "#34495E",
-      "duration": null,
-      "duration_unit": "minutes"
+      "supports_value_entry": false
     },
     {
       "id": 23,
@@ -257,11 +276,11 @@
       "description": "Record a blood pressure measurement for the current day",
       "icon": "bp",
       "color": "#E63946",
-      "supports_value_entry": true,
       "measurement_type": "blood_pressure",
-      "value_type": "range",
-      "value_label": "Blood pressure",
-      "value_placeholder": "e.g. 120/80 (systolic/diastolic)",
+      "supports_value_entry": true,
+      "value_type": "number/number",
+      "value_labels": ["Systolic", "Diastolic"],
+      "value_placeholder": "e.g. 120/80",
       "value_unit": "mmHg"
     },
     {
@@ -272,10 +291,10 @@
       "description": "Record the current body weight",
       "icon": "weight",
       "color": "#5C7CFA",
-      "supports_value_entry": true,
       "measurement_type": "weight",
+      "supports_value_entry": true,
       "value_type": "number",
-      "value_label": "Weight",
+      "value_labels": ["Weight"],
       "value_placeholder": "e.g. 72.5",
       "value_unit": "kg"
     },
@@ -287,10 +306,10 @@
       "description": "Record the current heart rate",
       "icon": "heart-pulse",
       "color": "#E03131",
-      "supports_value_entry": true,
       "measurement_type": "heart_rate",
+      "supports_value_entry": true,
       "value_type": "number",
-      "value_label": "Heart rate",
+      "value_labels": ["Heart rate"],
       "value_placeholder": "e.g. 68",
       "value_unit": "bpm"
     },
@@ -302,10 +321,10 @@
       "description": "Record the current blood sugar value",
       "icon": "glucose",
       "color": "#7B61FF",
-      "supports_value_entry": true,
       "measurement_type": "blood_sugar",
+      "supports_value_entry": true,
       "value_type": "number",
-      "value_label": "Blood sugar",
+      "value_labels": ["Blood sugar"],
       "value_placeholder": "e.g. 5.6",
       "value_unit": "mmol/L"
     }
